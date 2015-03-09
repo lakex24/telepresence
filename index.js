@@ -3,7 +3,10 @@
 // var io = require('socket.io')(http);
 
 var app = require('express')();
-var server = app.listen(5000);
+app.set('port', (process.env.PORT || 5000));
+var server = app.listen(app.get('port'), function() {
+	console.log("Node app is running at localhost:" + app.get('port'));
+});
 var io = require('socket.io').listen(server);
 
 app.get('/', function(req, res){
@@ -12,7 +15,7 @@ app.get('/', function(req, res){
 
 
 
-// app.set('port', (process.env.PORT || 5000));
+
 // app.listen(app.get('port'), function() {
 //   console.log("Node app is running at localhost:" + app.get('port'));
 // });
