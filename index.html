@@ -20,6 +20,7 @@
     </form>
 
 <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<!-- <script src='node_modules/socket.io/node_modules/socket.io-client/socket.io.js'></script> -->
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 <script>
   
@@ -27,15 +28,15 @@
                        // could specify io(URL)
                        // fires the 'connection' event
 
-  // $('form').submit(function(){
-  //   socket.emit('chat message', $('#m').val());   // sends msg to server
-  //   $('#m').val('');
-  //   return false;
-  // });
+  $('form').submit(function(){
+    socket.emit('chat message', $('#m').val());   // sends msg to server
+    $('#m').val('');
+    return false;
+  });
 
-  // socket.on('chat message', function(msg){
-  //   $('#messages').append($('<li>').text(msg));
-  // });
+  socket.on('chat message', function(msg){
+    $('#messages').append($('<li>').text(msg));
+  });
 </script>
 
   </body>
