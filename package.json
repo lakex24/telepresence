@@ -1,9 +1,21 @@
 {
-  "name": "socket-chat-example",
+  "name": "PeerChat",
   "version": "0.0.1",
-  "description": "my first socket.io app",
+  "description": "Peer Chat: Video Chatting Application",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/webrtc/codelab"
+  },
+  "keywords": [
+    "socket.io",
+    "video chat"
+  ],
+  "author": "https://github.com/Hironate",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.10.2",
-    "socket.io": "^1.3.5"
+    "node-static": "~0.7.1",
+    "socket.io": "~0.9.16",
+    "express": "~3.4.0"
   }
 }
