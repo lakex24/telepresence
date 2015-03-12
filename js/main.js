@@ -19,18 +19,21 @@ var dataChannel;
 
 var turnReady;
 var pc_config;
-window.turnserversDotComAPI.iceServers(function(data) {
-    pc_config = {
-      'iceServers': data
-    };
-    console.log(data);
-});
+
+// window.turnserversDotComAPI.iceServers(function(data) {
+//     pc_config = {
+//       'iceServers': data
+//     };
+//     console.log(data);
+// });
+
+
 //Ice Servers Added
-// var pc_config = {
-//   'iceServers': [{
-//     'url': 'stun:stun.l.google.com:19302'
-//   }]
-// };
+var pc_config = {
+  'iceServers': [{
+    'url': 'stun:stun.l.google.com:19302'
+  }]
+};
 
 // pc_constraints is not currently used, but the below would allow us to enforce
 // DTLS keying for SRTP rather than SDES ... which is becoming the default soon
